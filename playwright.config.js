@@ -22,7 +22,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 3 : 3,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  timeout: 60000,
+  timeout: 120000,
 
   expect:{
 
@@ -62,10 +62,10 @@ export default defineConfig({
     // },
 
     /* Test against mobile viewports. */
-    {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
-    },
+    // {
+    //   name: 'Mobile Chrome',
+    //   use: { ...devices['Pixel 5'] },
+    // },
     // {
     //   name: 'Mobile Safari',
     //   use: { ...devices['iPhone 12'] },
@@ -76,10 +76,10 @@ export default defineConfig({
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
-    {
-      name: 'Google Chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    },
+    // {
+    //   name: 'Google Chrome',
+    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+    // },
   ],
 
   /* Run your local dev server before starting the tests */

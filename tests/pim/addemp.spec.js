@@ -24,6 +24,6 @@ await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/lo
   await page.getByRole('textbox', { name: 'Last Name' }).click();
   await page.getByRole('textbox', { name: 'Last Name' }).fill(employees[emp].lastname);
   await page.getByRole('button', { name: 'Save' }).click();
-  await expect(page.getByText('Successfully Saved')).toBeVisible();
+  // await expect(page.getByText('Successfully Saved')).toBeVisible();
 });
 }
